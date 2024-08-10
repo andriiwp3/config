@@ -6,3 +6,7 @@ eval "$(rbenv init - zsh)"
 
 # pyenv
 eval "$(pyenv init -)"
+
+# starship
+eval "$(starship init zsh)"
+
