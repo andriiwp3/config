@@ -23,7 +23,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup ({
 	require 'andriiwp3.plugins.gitsigns',
 	require 'andriiwp3.plugins.telescope',
+	require 'andriiwp3.plugins.lsp',
 	require 'andriiwp3.plugins.conform',
+	require 'andriiwp3.plugins.autocompletion',
 	require 'andriiwp3.plugins.catppuccin',
 })
 
