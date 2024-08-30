@@ -28,6 +28,7 @@ require('lazy').setup({
 	require 'andriiwp3.plugins.autocompletion',
 	require 'andriiwp3.plugins.catppuccin',
 	require 'andriiwp3.plugins.treesitter',
+	require 'andriiwp3.plugins.nvim-tree',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
