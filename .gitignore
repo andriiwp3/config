@@ -10,3 +10,6 @@
 
 !skhd/
 !skhd/**
+
+!nvim/
+!nvim/**
