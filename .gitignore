@@ -3,5 +3,10 @@
 !.gitignore
 !README.md
 !ghostty/
+!ghostty/**
+
 !yabai/
+!yabai/**
+
 !skhd/
+!skhd/**
