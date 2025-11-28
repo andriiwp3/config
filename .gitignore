@@ -1,15 +1,7 @@
-# TODO: Remove when everything is ready
-*
-!.gitignore
-!README.md
-!ghostty/
-!ghostty/**
-
-!yabai/
-!yabai/**
-
-!skhd/
-!skhd/**
-
-!nvim/
-!nvim/**
+.wrangler/
+gcloud/
+github-copilot/
+git/
+nvm/
+sketchybar/
+wallpapers/
