@@ -1,0 +1,5 @@
+export ITEM_BG_COLOR=0xff313244
+
+export BATTERY_LOW=0xfff38ba8
+export BATTERY_MID=0xfffab387
+export BATTERY_NORMAL=0xffffffff

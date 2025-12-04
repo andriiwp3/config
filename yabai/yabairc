@@ -8,7 +8,7 @@ yabai -m config layout bsp \
                 window_placement second_child
 
 # padding
-yabai -m config top_padding 0 \
+yabai -m config top_padding 5 \
                 bottom_padding 0 \
                 left_padding 0 \
                 right_padding 0 \
