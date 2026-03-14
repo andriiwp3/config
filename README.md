@@ -5,3 +5,7 @@ Get a machine ready to go in seconds
 ## Contents 🗽
 
 ...
+
+## References 🙏
+
+- Sketchybar config - https://github.com/adriankarlen/dots

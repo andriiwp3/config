@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # load the scripting addition
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
@@ -14,7 +16,7 @@ yabai -m config top_padding 5 \
                 right_padding 0 \
                 window_gap 0
 
-yabai -m config external_bar all:30:0
+yabai -m config external_bar all:35:0
 
 # mouse setiings
 # - mouse_action1 - left click + drag
@@ -26,4 +28,7 @@ yabai -m config mouse_follows_focus off \
                 mouse_action2 resize
 
 # Disable specific apps
-yabai -m rule --add app="^(System Settings|Find My|System Information|Calendar|Activity Monitor|FaceTime|Screen Sharing|Calculator|Stickies|Pritunl)$" manage=off
+yabai -m rule --add app="^(Calculator|Calendar|Outlook|Software Update|Dictionary|System Preferences|Pritunl|System Settings|Find My|App Store|Activity Monitor|Raycast)$" manage=off
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
+yabai -m rule --add label="Teams" app="Microsoft Teams" title="^(Meeting|Calling)" manage=off
