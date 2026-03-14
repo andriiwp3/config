@@ -1,2 +1,9 @@
-macos-icon = xray
-theme = Gruvbox Dark Hard
+#!/bin/bash
+
+theme = Rose Pine
+
+macos-titlebar-style = hidden
+
+cursor-color = cell-foreground
+cursor-text = cell-background
+cursor-style = block
