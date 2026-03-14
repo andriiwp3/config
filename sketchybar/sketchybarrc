@@ -1,68 +1,74 @@
-source "$CONFIG_DIR/colors.sh"
-source "$CONFIG_DIR/icons.sh"
-PLUGIN_DIR="$CONFIG_DIR/plugins"
+#!/opt/homebrew/bin/lua
 
-##### Bar Appearance #####
+-- Load the sketchybar-package and prepare the helper binaries
+require("helpers")
+require("init")
 
-sketchybar --bar position=top height=40 blur_radius=10
+-- # source "$CONFIG_DIR/colors.sh"
+-- # source "$CONFIG_DIR/icons.sh"
+-- # PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-##### Changing defaults #####
+-- # ##### Bar Appearance #####
 
-default=(
-  padding_left=5
-  padding_right=5
-  icon.font="Hack Nerd Font:Regular:14.0"
-  label.font="SF Pro:Semibold:14.0"
-  icon.color=$ITEM_LABEL_COLOR
-  label.color=$ITEM_LABEL_COLOR
-  icon.padding_left=10
-  icon.padding_right=0
-  label.padding_left=10
-  label.padding_right=10
-  background.color=$ITEM_BG_COLOR
-  background.corner_radius=5
-  background.height=24
-)
-sketchybar --default "${default[@]}"
+-- # sketchybar --bar position=top height=40 blur_radius=10
+
+-- # ##### Changing defaults #####
+
+-- # default=(
+-- #   padding_left=5
+-- #   padding_right=5
+-- #   icon.font="Hack Nerd Font:Regular:14.0"
+-- #   label.font="SF Pro:Semibold:14.0"
+-- #   icon.color=$ITEM_LABEL_COLOR
+-- #   label.color=$ITEM_LABEL_COLOR
+-- #   icon.padding_left=10
+-- #   icon.padding_right=0
+-- #   label.padding_left=10
+-- #   label.padding_right=10
+-- #   background.color=$ITEM_BG_COLOR
+-- #   background.corner_radius=5
+-- #   background.height=24
+-- # )
+-- # sketchybar --default "${default[@]}"
 
 
-##### Apple Logo #####
+-- # ##### Apple Logo #####
 
-sketchybar --add item apple_logo left \
-            --set apple_logo icon=$APPLE \
-                  icon.padding_right=10 \
-                  label.drawing=off \
-                  click_script="sketchybar -m --update"
+-- # sketchybar --add item apple_logo left \
+-- #             --set apple_logo icon=$APPLE \
+-- #                   icon.padding_right=10 \
+-- #                   label.drawing=off \
+-- #                   click_script="sketchybar -m --update"
 
-##### Active App Name #####
+-- # ##### Active App Name #####
 
-sketchybar --add item front_app left \
-           --set front_app icon.drawing=off \
-                  script="$PLUGIN_DIR/front_app.sh" \
-            --subscribe front_app front_app_switched
+-- # sketchybar --add item front_app left \
+-- #            --set front_app icon.drawing=off \
+-- #                   script="$PLUGIN_DIR/front_app.sh" \
+-- #             --subscribe front_app front_app_switched
 
-##### Spotify Player #####
+-- # ##### Spotify Player #####
 
-MUSIC_EVENT="com.spotify.client.PlaybackStateChanged"
-sketchybar --add event music_change $MUSIC_EVENT
+-- # MUSIC_EVENT="com.spotify.client.PlaybackStateChanged"
+-- # sketchybar --add event music_change $MUSIC_EVENT
 
-sketchybar --add item music left \
-           --set music icon=$SPOTIFY \
-                 script="$PLUGIN_DIR/music.sh" \
-                 click_script="open -a Spotify" \
-                 drawing=off \
-           --subscribe music music_change
+-- # sketchybar --add item music left \
+-- #            --set music icon=$SPOTIFY \
+-- #                  script="$PLUGIN_DIR/music.sh" \
+-- #                  click_script="open -a Spotify" \
+-- #                  drawing=off \
+-- #            --subscribe music music_change
 
-##### Clock #####
+-- # ##### Clock #####
 
-sketchybar --add item clock right \
-           --set clock icon=$CLOCK \
-                 script="$PLUGIN_DIR/clock.sh" \
-                 update_freq=10 
+-- # sketchybar --add item clock right \
+-- #            --set clock icon=$CLOCK \
+-- #                  script="$PLUGIN_DIR/clock.sh" \
+-- #                  update_freq=10 
 
-##### Battery #####
+-- # ##### Battery #####
 
-sketchybar --add item battery right \
-           --set battery script="$PLUGIN_DIR/battery.sh" \
-                 update_freq=120 \
-            --subscribe battery system_woke power_source_change
+-- # sketchybar --add item battery right \
+-- #            --set battery script="$PLUGIN_DIR/battery.sh" \
+-- #                  update_freq=120 \
+-- #             --subscribe battery system_woke power_source_change
