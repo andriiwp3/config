@@ -50,6 +50,8 @@ shift + alt - 8 : yabai -m window --space 8 --focus
 shift + alt - 9 : yabai -m window --space 9 --focus
 shift + alt - 0 : yabai -m window --space 10 --focus
 
+shift + alt - e : yabai -m window --display 2 --focus
+
 # move between spaces
 alt - p : yabai -m space --focus recent
 alt - 1 : yabai -m space --focus 1

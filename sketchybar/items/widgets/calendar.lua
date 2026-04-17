@@ -17,7 +17,7 @@ local minute = sbar.add("item", "widgets.calendar", {
     },
     color = colors.calendar.label,
     padding_left = 0,
-    padding_right = 0,
+    padding_right = 9,
   },
   position = "right",
   update_freq = 30,

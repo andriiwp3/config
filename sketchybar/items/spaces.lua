@@ -42,37 +42,37 @@ for i = 5, 1, -1 do
   end)
 end
 
-sbar.add("bracket", { "/space\\..*/" }, {
-  background = {
-    height = 34,
-    color = colors.bracket.bg,
-    border_color = colors.bracket.border,
-  },
-  padding_left = 0,
-})
+-- sbar.add("bracket", { "/space\\..*/" }, {
+--   background = {
+--     height = 34,
+--     color = colors.bracket.bg,
+--     border_color = colors.bracket.border,
+--   },
+--   padding_left = 0,
+-- })
 
-local spaces_indicator = sbar.add("item", "system.spaces_indicator", {
-  icon = {
-    string = icons.switch.on,
-    color = colors.menu.fg,
-    padding_left = 7,
-    padding_right = 9,
-  },
-  label = {
-    drawing = false,
-  },
-  background = {
-    color = colors.menu.bg,
-  },
-})
+-- local spaces_indicator = sbar.add("item", "system.spaces_indicator", {
+--   icon = {
+--     string = icons.switch.on,
+--     color = colors.menu.fg,
+--     padding_left = 7,
+--     padding_right = 9,
+--   },
+--   label = {
+--     drawing = false,
+--   },
+--   background = {
+--     color = colors.menu.bg,
+--   },
+-- })
 
-spaces_indicator:subscribe("display_menu", function()
-  local currently_on = spaces_indicator:query().icon.value == icons.switch.on
-  spaces_indicator:set {
-    icon = currently_on and icons.switch.off or icons.switch.on,
-  }
-end)
+-- spaces_indicator:subscribe("display_menu", function()
+--   local currently_on = spaces_indicator:query().icon.value == icons.switch.on
+--   spaces_indicator:set {
+--     icon = currently_on and icons.switch.off or icons.switch.on,
+--   }
+-- end)
 
-spaces_indicator:subscribe("mouse.clicked", function()
-  sbar.trigger "display_menu"
-end)
+-- spaces_indicator:subscribe("mouse.clicked", function()
+--   sbar.trigger "display_menu"
+-- end)

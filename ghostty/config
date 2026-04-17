@@ -4,6 +4,11 @@ theme = Rose Pine
 
 macos-titlebar-style = hidden
 
+background-opacity = 0.8
+
+window-padding-x = 10
+window-padding-y = 10
+
 cursor-color = cell-foreground
 cursor-text = cell-background
 cursor-style = block
